@@ -10,6 +10,8 @@ jobs:
       - name: Configuração do Node
         uses: actions/setup-node@v2
         with:
-         node-version: '14'
+          node-version: '14'
+      - run: npm install
+      - run: npm test npm test
       - name: Verifica versão
         run: node --version
