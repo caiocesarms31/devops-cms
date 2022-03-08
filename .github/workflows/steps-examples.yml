@@ -1,0 +1,15 @@
+name: steps examples
+
+on:
+   push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: configuração do node
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: verification of node version
+        run: node --version
