@@ -12,7 +12,7 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: deploy
-        path: README.md
+        path: /home/README.md
 
   deploy:
     runs-on: ubuntu-latest
@@ -26,5 +26,5 @@ jobs:
     - uses: actions/download-artifact@v2
       with:
         name: deploy
-        path: README.md
+        path: /home/README.md
     - run: aws s3 cp README.md s3://devops-cyo --recursive --acl public-read 
