@@ -12,6 +12,8 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
+          cache: 'npm'
+          cache-dependency-path: perfanalytics-api/package-lock.json
       - run: npm --prefix frontend install
       - run: npm --prefix frontend run build
       - run: cd frontend && npx next export
