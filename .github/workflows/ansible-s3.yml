@@ -1,4 +1,4 @@
-name: ansible s3
+name: ansible s2
 
 on:
   push:
